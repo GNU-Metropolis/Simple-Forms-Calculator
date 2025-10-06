@@ -87,7 +87,7 @@ namespace _25_10_02_Forms_Calculator
             if (firstPress)
             {
                 total += Convert.ToDouble(txtDisplay.Text);
-                txtDisplay.Clear();
+                txtDisplay.Text = "0";
                 firstPress = false;
             }
             else
@@ -115,7 +115,7 @@ namespace _25_10_02_Forms_Calculator
            }
            else if (operation == "subtract")
            {
-               total -= Convert.ToDouble(txtDisplay.Text);
+               total -= Convert.ToDouble(txtDisplay.Text); // TODO: fix weird interaction where equals swaps a value from positive to negative and vice versa
            }
            txtDisplay.Text = total.ToString();
            total = 0;
@@ -135,7 +135,7 @@ namespace _25_10_02_Forms_Calculator
             if (firstPress)
             {
                 total += Convert.ToDouble(txtDisplay.Text);
-                txtDisplay.Clear();
+                txtDisplay.Text = "0";
                 firstPress = false;
             }
             else
