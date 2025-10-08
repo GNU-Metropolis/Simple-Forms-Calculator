@@ -166,5 +166,10 @@ namespace _25_10_02_Forms_Calculator
                 txtDisplay.Text += x;
             }
         }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            valueAddReplace(btn0.Text);
+        }
     }
 }

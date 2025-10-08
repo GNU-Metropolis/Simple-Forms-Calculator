@@ -45,6 +45,7 @@ namespace _25_10_02_Forms_Calculator
             this.btnEquals = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -54,6 +55,7 @@ namespace _25_10_02_Forms_Calculator
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.Size = new System.Drawing.Size(200, 29);
             this.txtDisplay.TabIndex = 0;
+            this.txtDisplay.Text = "0";
             // 
             // button2
             // 
@@ -175,7 +177,7 @@ namespace _25_10_02_Forms_Calculator
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("OCR A Extended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.Location = new System.Drawing.Point(116, 288);
+            this.btnPlus.Location = new System.Drawing.Point(43, 343);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(55, 49);
             this.btnPlus.TabIndex = 19;
@@ -216,12 +218,24 @@ namespace _25_10_02_Forms_Calculator
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
+            // btn0
+            // 
+            this.btn0.Font = new System.Drawing.Font("OCR A Extended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn0.Location = new System.Drawing.Point(116, 288);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(55, 49);
+            this.btn0.TabIndex = 23;
+            this.btn0.Text = "0";
+            this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(284, 461);
+            this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnEquals);
@@ -263,6 +277,7 @@ namespace _25_10_02_Forms_Calculator
         private System.Windows.Forms.Button btnEquals;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.Button btn0;
     }
 }
 
