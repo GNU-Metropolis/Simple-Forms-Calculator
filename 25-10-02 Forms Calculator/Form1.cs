@@ -115,9 +115,10 @@ namespace _25_10_02_Forms_Calculator
            }
            else if (operation == "subtract")
            {
-               total -= Convert.ToDouble(txtDisplay.Text); // TODO: fix weird interaction where equals swaps a value from positive to negative and vice versa
+               total -= Convert.ToDouble(txtDisplay.Text);
            }
-           txtDisplay.Text = total.ToString();
+           operation = "add"; // If it doesn't go back to operation "add" after the equals sign is pressed, then pressing equals on a number that just had a subtraction operation applied will turn it negative
+           txtDisplay.Text = total.ToString(); // if positive, and positive if negative. If the operation is "add" it adds the value on screen to the total (which is now 0), which will just be the same number.
            total = 0;
            replaceTextBoxValue = true;
         }
